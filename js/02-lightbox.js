@@ -15,16 +15,9 @@ function createGalleryItems(items) {
         </a>
       </li>
     `).join('');}
-    const openModal = (event) => {
-        event.preventDefault();
-        
-        if (event.target.nodeName !== 'IMG') {
-          return;
-        };
-        
-      }
+    
 
-
+gallery.innerHTML = createGalleryItems(galleryItems);
       var lightbox = new SimpleLightbox('.gallery a',{
     captionDelay: 250,
     captionsData: "alt",
@@ -33,6 +26,6 @@ function createGalleryItems(items) {
  });
  
 
-gallery.addEventListener('click', openModal);
-gallery.innerHTML = createGalleryItems(galleryItems);
+
+
 console.log(galleryItems);
